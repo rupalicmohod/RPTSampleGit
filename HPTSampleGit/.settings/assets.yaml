@@ -18,6 +18,33 @@ resources:
     resources: 
   - name: Results
     resources: 
+      - name: LoginHrm_1689600638453.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1689600638453
+          tags: 
+          testId: A1EE24A2082DB861EE8EB56464316636
+          testName: LoginHrm
+        dependencies: 
+          - path: /HPTSampleGit/Results/LoginHrm_1689600638453_orch!system.mstats
+            type: statsSessionStore
+          - path: /HPTSampleGit/Results/LoginHrm_1689600638453_orch!system.rstats
+            type: statsSessionStore
+          - path: /HPTSampleGit/Results/LoginHrm_1689600638453_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /HPTSampleGit/Results/LoginHrm_1689600638453_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /HPTSampleGit/Results/LoginHrm_1689600656123.executiondlr
+            type: statsSessionAsset
+          - path: /HPTSampleGit/Schedules/LoginHrm.testsuite
+            type: statsSessionTest
+      - name: LoginHrm_1689600638453_orch!system.mstats
+      - name: LoginHrm_1689600638453_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: LoginHrm_1689600638453_perf!localhost.mstats
+      - name: LoginHrm_1689600638453_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: LoginHrm_1689600656123.executiondlr
   - name: Schedules
     resources: 
       - name: LoginHrm.testsuite
@@ -45,5 +72,7 @@ User Group 1: Group Size 100.0 percent
     resources: 
       - name: test
         resources: 
+          - name: LoginHrm_Schedule_A1EE24A2082DB861EE8EB56464316636.java
+            type: com.ibm.rational.test.lt.generatedCode
           - name: Test1DemoQaGIT_Test_A1EE1EF476982500CC11E63438303633.java
             type: com.ibm.rational.test.lt.generatedCode
