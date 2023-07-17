@@ -1,0 +1,49 @@
+name: HPTSampleGit
+version: 2
+projectReferences: 
+  - /We4
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /HPTSampleGit/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+  - name: Datasets
+    resources: 
+  - name: 'JMeter Tests'
+    resources: 
+  - name: Locations
+    resources: 
+  - name: Results
+    resources: 
+  - name: Schedules
+    resources: 
+      - name: LoginHrm.testsuite
+        type: com.ibm.rational.test.lt.schedule
+        version: 10.5.2.0
+        properties: 
+          description: 'Stages:
+
+	users=1; duration=11 seconds
+
+User Group 1: Group Size 100.0 percent
+
+	Test(s): OrangeHRMLogin
+
+'
+          name: LoginHrm
+          type: com.ibm.rational.test.common.schedule.Schedule
+          uid: A1EE24A2082DB861EE8EB56464316636
+        dependencies: 
+          - path: /We4/OrangeHRMLogin.testsuite
+            type: scheduleInvokedTest
+  - name: Tests
+    resources: 
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: Test1DemoQaGIT_Test_A1EE1EF476982500CC11E63438303633.java
+            type: com.ibm.rational.test.lt.generatedCode
